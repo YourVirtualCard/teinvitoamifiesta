@@ -7,7 +7,15 @@ body {
     font-size: 3rem;
     margin: 0;
     padding: 0;
+
+    /* Centrando contenido */
+    display: flex; /* Habilita Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    text-align: center; /* Centra el texto */
 }
+
 
 * {
     box-sizing: border-box;
