@@ -14,15 +14,17 @@ body {
 
 
 .container {
-    width: 100%;
-    max-width: 90%; /* Máximo 90% del ancho disponible */
+    width:  90%
+    max-width:100%;; /* Máximo 90% del ancho disponible */
     min-width: 320px; /* Evita que sea demasiado pequeño */
     margin: auto;
-    padding: 20px;
+    padding: 15px;
     background: rgba(0, 0, 0, 0.7);
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: center;
     font-size: 2rem;
+    overflow: hidden; /* Esto también ayuda a contener el contenido */
+
 }
 
 
@@ -197,16 +199,20 @@ input[type="text"], input[type="email"], textarea {
 /* Adaptando tamaños */
 
 /* Estilos del formulario de Google */
-
-form {
+iframe {
     width: 100%;
-    max-width: 100%; /* Evita desbordamientos */
-    overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    max-width: 100%; /* Asegura que no desborde */
+    height: 100vh; /* Ajusta la altura al contenido visible */
+    border: none; /* Elimina bordes adicionales */
+    margin: 0 auto; /* Centra el iframe */
+    display: block;
 }
 
+form {
+    max-width: 100%; /* Mantén el formulario dentro del contenedor */
+    overflow-x: hidden; /* Evita desbordamiento horizontal */
+    padding: 0;
+}
 
 input, select, textarea {
     width: calc(100% - 20px); /* Respeta el padding */
