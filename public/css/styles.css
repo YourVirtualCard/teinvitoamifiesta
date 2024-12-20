@@ -13,16 +13,15 @@ body {
 }
 
 
+
 .container {
-    width: 100%;
-    max-width: 90%; /* Máximo 90% del ancho disponible */
-    min-width: 320px; /* Evita que sea demasiado pequeño */
+    width: 90%;
+    max-width: 800px;
+    min-width: 320px;
     margin: auto;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 15px;
-    text-align: center;
-    font-size: 2rem;
 }
 
 
@@ -358,6 +357,13 @@ button:hover {
         font-size: 1rem;
         padding: 10px;
     }
+
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Cambia de contain a cover para cubrir todo */
+        animation: fall 15s linear infinite;
+    }
+}
 
 
  @keyframes fall {
