@@ -1,14 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const backgroundMusic = document.getElementById('backgroundMusic');
-    
-    // Intentamos reproducir la música automáticamente
-    backgroundMusic.currentTime = 3; // Opcional, para saltar unos segundos al inicio
-    backgroundMusic.play().then(() => {
-        console.log('Música reproducida automáticamente');
-    }).catch((error) => {
-        console.log('Error al intentar reproducir la música:', error);
-    });
-    
+    let isMusicPlaying = false;
+
+    function playMusic() {
+        if (!isMusicPlaying) {
+            backgroundMusic.currentTime = 3;
+            backgroundMusic.play().then(() => {
+                isMusicPlaying = true;
+                backgroundMusic.loop = true;
+            }).catch((error) => {
+                console.log('Error al reproducir música:', error);
+            });
+        }
+    }
+
     document.addEventListener('click', () => {
         playMusic();
         document.removeEventListener('click', playMusic);
