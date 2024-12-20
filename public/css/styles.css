@@ -21,6 +21,11 @@ body {
     padding: 20px;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 15px;
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex; /* Habilita el uso de Flexbox */
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
 }
 
 form {
