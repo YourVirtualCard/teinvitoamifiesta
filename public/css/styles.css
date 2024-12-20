@@ -7,7 +7,6 @@ body {
     font-size: 3rem;
     margin: 0;
     padding: 0;
-
     /* Centrando contenido */
     display: flex; /* Habilita Flexbox */
     justify-content: center; /* Centra horizontalmente */
@@ -15,22 +14,25 @@ body {
     min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
     text-align: center; /* Centra el texto */
 }
+
 * {
     box-sizing: border-box;
 }
 
 .container {
-    display: flex; /* Habilita Flexbox */
-    flex-direction: column; /* Asegura que los elementos se apilen en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Centra el texto */
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    height: 100%; /* Opcional, si quieres llenar el contenedor */
-    padding: 20px; /* Añade algo de espacio interno */
-    margin: 0 auto; /* Centra el contenedor si es necesario */
+    width: 90%;
+    max-width: 800px;
+    min-width: 320px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex; /* Habilita el uso de Flexbox */
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
 }
-
 
 form {
     width: 100%;
