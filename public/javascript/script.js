@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }).catch((error) => {
         console.log('Error al intentar reproducir la música:', error);
     });
+    
+    document.addEventListener('click', () => {
+        playMusic();
+        document.removeEventListener('click', playMusic);
+    });
 
     const carouselItems = document.querySelectorAll('.carousel-item');
     const prevBtn = document.getElementById('prevBtn');
