@@ -199,20 +199,23 @@ input[type="text"], input[type="email"], textarea {
 /* Adaptando tamaños */
 
 /* Estilos del formulario de Google */
+/* Estilos del iframe (Formulario de Google) */
 iframe {
     width: 100%;
     max-width: 100%; /* Asegura que no desborde */
-    height: 100vh; /* Ajusta la altura al contenido visible */
+    height: auto; /* Ajusta la altura para que se respete la proporción */
     border: none; /* Elimina bordes adicionales */
     margin: 0 auto; /* Centra el iframe */
     display: block;
 }
 
-form {
-    max-width: 100%; /* Mantén el formulario dentro del contenedor */
-    overflow-x: hidden; /* Evita desbordamiento horizontal */
-    padding: 0;
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    iframe {
+        height: 70vh; /* Ajusta la altura del iframe al 70% de la altura visible en pantallas pequeñas */
+    }
 }
+
 
 input, select, textarea {
     width: calc(100% - 20px); /* Respeta el padding */
