@@ -1,6 +1,6 @@
 body {
     font-family: 'Pinyon Script', serif;
-    background-image: url('img/fondo.jpeg');
+    background-image: url('../img/fondo.jpeg');
     animation: fall 30s linear infinite;
     background-size: contain;
     color: #fff;
