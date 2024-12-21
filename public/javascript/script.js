@@ -2,17 +2,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const backgroundMusic = document.getElementById('backgroundMusic');
     let isMusicPlaying = false;
 
-    function playMusic() {
-        if (!isMusicPlaying) {
-            backgroundMusic.currentTime = 3;
-            backgroundMusic.play().then(() => {
-                isMusicPlaying = true;
-                backgroundMusic.loop = true;
-            }).catch((error) => {
-                console.log('Error al reproducir música:', error);
-            });
-        }
+function playMusic() {
+    if (!isMusicPlaying) {
+        backgroundMusic.currentTime = 3;
+        backgroundMusic.play().then(() => {
+            isMusicPlaying = true;
+            backgroundMusic.loop = true;
+            console.log('Música reproduciéndose');
+        }).catch((error) => {
+            console.log('Error al reproducir música:', error);
+        });
     }
+}
+
 
     document.addEventListener('click', () => {
         playMusic();
